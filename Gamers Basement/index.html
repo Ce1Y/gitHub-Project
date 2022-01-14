@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Gamers Basement</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    <title>Gamers Basement</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <link rel = "stylesheet" href = "https://bootswatch.com/5/vapor/bootstrap.min.css">
-      <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
   </head>
     
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Gamer Basement</a>
+        <a class="navbar-brand" href="index.html">Gamer Basement</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +28,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Games</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Apex Legend</a>
+                <a class="dropdown-item" href="apex.html">Apex Legend</a>
                 <!-- <div class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="#">Counter-Strike: Global Offensive</a>
                 <!-- <div class="dropdown-divider"></div> -->
@@ -38,8 +38,8 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            <input id="searchResults" class="form-control me-sm-2" type="text" placeholder="Playername">
+            <button id="searchbtn" class="btn btn-secondary my-2 my-sm-0" type="submit" onclick="search()">Search</button>
           </form>
         </div>
       </div>
@@ -47,7 +47,7 @@
 
     <div class="container-fluid bg-info bg-opacity-50 p-5" style="margin-top:50px">
       <p class="display-1">Gamer Basement</p>
-      <p class="h2">We offer "The Three Best" :</p>
+      <p class="h2">We offer three "The Best" :</p>
       <ol class="h3">
         <li>The best reliability</li>
         <li>The best availibility</li>
@@ -61,15 +61,15 @@
         <p class="h5">TOP APEX PLAYERS</p>
       </div>
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-primary">default</button>
+        <button id="apexTeamBtn" type="button" class="btn btn-primary">default</button>
         <div class="btn-group" role="group">
           <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a id="apexNRG" class="dropdown-item">NRG</a>
+            <a id="apexTSM" class="dropdown-item">Team SoloMid</a>
+            <a id="apexTeamLiquid" class="dropdown-item">Team Liquid</a>
+            <a id="apexCloud9" class="dropdown-item">Cloud9</a>
+            <a id="apexG2" class="dropdown-item">G2 Esports</a>
           </div>
         </div>
       </div>
@@ -77,16 +77,16 @@
     <hr>
     <div class="d-flex flex-row flex-nowrap">
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="srcpack/Apex_Gamers/Aceu.png" alt="Card image" style="width: 100%;">
+        <img id="apexplayer01" class="card-img-top" src="#" alt="Card image" style="width: 100%;">
         <div class="card-body">
           <h4 class="card-title">Aceu</h4>
           <p class="card-text">Pro Player introduction</p>
-          <a href="Aceu.html" class="btn btn-primary" target="blank">See Profile</a>
+          <a href="aceu.html" class="btn btn-primary" target="blank">See Profile</a>
         </div>
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="apexplayer02" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -95,7 +95,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="apexplayer03" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -104,7 +104,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="apexplayer04" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -113,7 +113,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="apexplayer05" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -144,25 +144,16 @@
     <hr>
     <div class="d-flex flex-row flex-nowrap">
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="srcpack/CSGO_Gamers/AmaNEk.png" alt="Card image" style="width: 100%">
+        <img id="csgoplayer01" class="card-img-top" src="srcpack/CSGO_Gamers/AmaNEk.png" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
-          <a href="AmaNEk.html" class="btn btn-primary" target="blank">See Profile</a>
+          <a href="amanek.html" class="btn btn-primary" target="blank">See Profile</a>
         </div>
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
-        <div class="card-body">
-          <h4 class="card-title">Pro Player Name</h4>
-          <p class="card-text">Pro Player introduction</p>
-          <a href="#" class="btn btn-primary" target="blank">See Profile</a>
-        </div>
-        <!-- <div class="card-footer">Footer</div> -->
-      </div>
-      <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="csgoplayer02" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -171,7 +162,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="csgoplayer03" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -180,7 +171,16 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="csgoplayer04" class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <div class="card-body">
+          <h4 class="card-title">Pro Player Name</h4>
+          <p class="card-text">Pro Player introduction</p>
+          <a href="#" class="btn btn-primary" target="blank">See Profile</a>
+        </div>
+        <!-- <div class="card-footer">Footer</div> -->
+      </div>
+      <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
+        <img id="csgoplayer05" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -211,7 +211,7 @@
     <hr>
     <div class="d-flex flex-row flex-nowrap mb-5">
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="valorantplayer01" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -220,7 +220,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="valorantplayer02" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -229,7 +229,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="valorantplayer03" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -238,7 +238,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="valorantplayer04" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -247,7 +247,7 @@
         <!-- <div class="card-footer">Footer</div> -->
       </div>
       <div class="card border-secondary mx-2 flex-fill" style="width: 100px">
-        <img class="card-img-top" src="#" alt="Card image" style="width: 100%">
+        <img id="valorantplayer05" class="card-img-top" src="#" alt="Card image" style="width: 100%">
         <div class="card-body">
           <h4 class="card-title">Pro Player Name</h4>
           <p class="card-text">Pro Player introduction</p>
@@ -262,6 +262,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

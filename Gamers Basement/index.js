@@ -26,15 +26,15 @@ function valorant_random_select() {
 }
 
 function apexBtnClick() {
-    apexNRG = document.getElementById("apexNRG");
+    apexNRG = document.getElementById("apex_NRG");
     apexNRG.addEventListener("click", function(){document.getElementById("apexTeamBtn").innerHTML = "NRG"}, false);
-    apexTSM = document.getElementById("apexTSM");
+    apexTSM = document.getElementById("apex_TSM");
     apexTSM.addEventListener("click", function(){document.getElementById("apexTeamBtn").innerHTML = "Team SoloMid"}, false);
-    apexTeamLiquid = document.getElementById("apexTeamLiquid");
+    apexTeamLiquid = document.getElementById("apex_TeamLiquid");
     apexTeamLiquid.addEventListener("click", function(){document.getElementById("apexTeamBtn").innerHTML = "Team Liquid"}, false);
-    apexCloud9 = document.getElementById("apexCloud9");
+    apexCloud9 = document.getElementById("apex_Cloud9");
     apexCloud9.addEventListener("click", function(){document.getElementById("apexTeamBtn").innerHTML = "Cloud9"}, false);
-    apexG2 = document.getElementById("apexG2");
+    apexG2 = document.getElementById("apex_G2");
     apexG2.addEventListener("click", function(){document.getElementById("apexTeamBtn").innerHTML = "G2 Esports"}, false);
 }
 

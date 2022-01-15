@@ -117,7 +117,10 @@ function csgo_random_select() {
                 img = document.getElementById('csgoplayer0' + i + '_img');
                 img.src = 'srcpack/CSGO_Gamers/' + csgoTeam[4] + '/' + csgoPlayerImg[player_index] + '.png';
                 name = document.getElementById('csgoplayer0' + i + '_name');
-                name.innerHTML = csgoPlayerImg[player_index];
+                if(csgoPlayerImg[player_index] == 'csgo_apex')
+                  name.innerHTML = 'apex';
+                else
+                  name.innerHTML = csgoPlayerImg[player_index];
                 introduction = document.getElementById('csgoplayer0' + i + '_introduction');
                 // introduction.innerHTML = //TODO
                 href = document.getElementById('csgoplayer0' + i + '_href')
@@ -335,7 +338,10 @@ function csgoBtnClick() {
             img = document.getElementById('csgoplayer0' + i + '_img');
             img.src = 'srcpack/CSGO_Gamers/' + csgoTeam[4] + '/' + csgoPlayerImg[player_index] + '.png';
             name = document.getElementById('csgoplayer0' + i + '_name');
-            name.innerHTML = csgoPlayerImg[player_index];
+            if(csgoPlayerImg[player_index] == 'csgo_apex')
+              name.innerHTML = 'apex';
+            else  
+              name.innerHTML = csgoPlayerImg[player_index];
             introduction = document.getElementById('csgoplayer0' + i + '_introduction');
             // introduction.innerHTML = //TODO
             href = document.getElementById('csgoplayer0' + i + '_href')

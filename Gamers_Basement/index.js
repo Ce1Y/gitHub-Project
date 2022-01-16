@@ -33,7 +33,7 @@ let searchbtn, searchResults;
 
 function search() {
   searchResults = document.getElementById("searchResults").value;
-  searchResults.toLowerCase();
+  searchResults =  searchResults.toLowerCase();
   switch (searchResults) {
     /*apex  */
     case 'aceu':

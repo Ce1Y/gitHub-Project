@@ -1,7 +1,13 @@
-const apexTeam = [];
+const apexTeam = ['Cloud9', 'G2 Esports', 'NRG', 'Team Liquid', 'Team SoloMid'];
 const csgoTeam = ['Astralis', 'G2 Esports', 'Natus Vincere', 'Team Liquid', 'Team Vitality'];
 const valorantTeam = ['Acend', 'Fnatic', 'Gambit', 'SENTINELS', 'Team Liquid']
-const apexPlayerImg = ['Aceu'];
+const apexPlayerImg = [
+        'Chappie', 'Grego', 'noted', 'Overpowered', 'PVPX',
+        'Dezignful', 'Gentrifyinq', 'Mimu', 'Phantasy', 'Resultuh',
+        'Aceu', 'Lulu', 'nafen', 'rogue', 'sweetdreams',
+        'Cali', 'casper', 'flanker', 'Mendokusaii', 'Nocturnal',
+        'albralelie', 'daltoosh', 'imperialhal', 'reps', 'verhulst'
+      ];
 const csgoPlayerImg = [
         'blameF', 'gla1ve', 'k0nfig', 'Lucky', 'Xyp9x',
         'AmaNEk', 'huNter', 'JACKZ', 'kennyS', 'Niko',
@@ -26,8 +32,106 @@ let csgo_NatusVincere, csgo_G2Esports, csgo_Astralis, csgo_TeamVitality, csgo_Te
 let valorant_Acend, valorant_Fnatic, valorant_Gambit, valorant_SENTINELS, valorant_TeamLiquid;
 
 function apex_random_select() {
-  
-
+    var apexVisit = new Array(25);
+    var team_number, player_index;
+    var img, name, introduction, href;
+//  initialize
+    for (var i = 0; i < 25; i++)
+      apexVisit[i] = 0;
+//  randomly select image
+    for (var i = 1; i <= 5; i++) {
+      team_number = Math.floor(Math.random() * 5);
+        switch(team_number) {
+          case 0:
+            while (1) {
+              player_index = Math.floor(Math.random() * 5); //0~4
+              if (apexVisit[player_index] != 1) {
+                apexVisit[player_index] = 1;
+                img = document.getElementById('apexplayer0' + i + '_img');
+                img.src = 'srcpack/Apex_Gamers/' + apexTeam[0] + '/' + apexPlayerImg[player_index] + '.png';
+                name = document.getElementById('apexplayer0' + i + '_name');
+                name.innerHTML = apexPlayerImg[player_index];
+                introduction = document.getElementById('apexplayer0' + i + '_introduction');
+                // introduction.innerHTML = //TODO
+                href = document.getElementById('apexplayer0' + i + '_href')
+                href.setAttribute('href', apexPlayerImg[player_index] + '.html');
+                break;
+              }
+            }
+            break;
+          case 1:
+            while (1) {
+              player_index = Math.floor(5 + Math.random() * 5); //5~9
+              if (apexVisit[player_index] != 1) {
+                apexVisit[player_index] = 1;
+                img = document.getElementById('apexplayer0' + i + '_img');
+                img.src = 'srcpack/Apex_Gamers/' + apexTeam[1] + '/' + apexPlayerImg[player_index] + '.png';
+                name = document.getElementById('apexplayer0' + i + '_name');
+                name.innerHTML = apexPlayerImg[player_index];
+                introduction = document.getElementById('apexplayer0' + i + '_introduction');
+                // introduction.innerHTML = //TODO
+                href = document.getElementById('apexplayer0' + i + '_href')
+                href.setAttribute('href', apexPlayerImg[player_index] + '.html');
+                break;
+              }
+            }
+            break;
+          case 2:
+            while (1) {
+              player_index = Math.floor(10 + Math.random() * 5); //10~14
+              if (apexVisit[player_index] != 1) {
+                apexVisit[player_index] = 1;
+                img = document.getElementById('apexplayer0' + i + '_img');
+                img.src = 'srcpack/Apex_Gamers/' + apexTeam[2] + '/' + apexPlayerImg[player_index] + '.png';
+                name = document.getElementById('apexplayer0' + i + '_name');
+                name.innerHTML = apexPlayerImg[player_index];
+                introduction = document.getElementById('apexplayer0' + i + '_introduction');
+                // introduction.innerHTML = //TODO
+                href = document.getElementById('apexplayer0' + i + '_href')
+                href.setAttribute('href', apexPlayerImg[player_index] + '.html');
+                break;
+              }
+            }
+            break;
+          case 3:
+            while (1) {
+              player_index = Math.floor(15 + Math.random() * 5); //15~19
+              if (apexVisit[player_index] != 1) {
+                apexVisit[player_index] = 1;
+                img = document.getElementById('apexplayer0' + i + '_img');
+                img.src = 'srcpack/Apex_Gamers/' + apexTeam[3] + '/' + apexPlayerImg[player_index] + '.png';
+                name = document.getElementById('apexplayer0' + i + '_name');
+                name.innerHTML = apexPlayerImg[player_index];
+                introduction = document.getElementById('apexplayer0' + i + '_introduction');
+                // introduction.innerHTML = //TODO
+                href = document.getElementById('apexplayer0' + i + '_href')
+                href.setAttribute('href', apexPlayerImg[player_index] + '.html');
+                break;
+              }
+            }
+            break;
+          case 4:
+            while (1) {
+              player_index = Math.floor(20 + Math.random() * 5); //20~24
+              if (apexVisit[player_index] != 1) {
+                apexVisit[player_index] = 1;
+                img = document.getElementById('apexplayer0' + i + '_img');
+                img.src = 'srcpack/Apex_Gamers/' + apexTeam[4] + '/' + apexPlayerImg[player_index] + '.png';
+                name = document.getElementById('apexplayer0' + i + '_name');
+                if(apexPlayerImg[player_index] == 'apex_apex')
+                  name.innerHTML = 'apex';
+                else
+                  name.innerHTML = apexPlayerImg[player_index];
+                introduction = document.getElementById('apexplayer0' + i + '_introduction');
+                // introduction.innerHTML = //TODO
+                href = document.getElementById('apexplayer0' + i + '_href')
+                href.setAttribute('href', apexPlayerImg[player_index] + '.html');
+                break;
+              }
+            }
+            break;
+        }
+    }
 }
 
 function csgo_random_select() {
@@ -380,15 +484,131 @@ function csgoBtnClick() {
 
 function valorantBtnClick() {
     valorant_Acend = document.getElementById("valorant_Acend");
-    valorant_Acend.addEventListener("click", function () { document.getElementById("valorantTeamBtn").innerHTML = "Acend" }, false);
+    valorant_Acend.addEventListener("click", function () { 
+      document.getElementById("valorantTeamBtn").innerHTML = "Acend";
+      var valorantVisit = new Array(5);
+      var player_index;
+      var img, name, introduction, href;
+      for(var i=0; i<5; i++)
+        valorantVisit[i] = 0;
+      for(var i=1; i<=5; i++)
+        while(1) {
+          player_index = Math.floor(0 + Math.random() * 5); //0~4
+          if (valorantVisit[player_index] != 1) {
+            valorantVisit[player_index] = 1;
+            img = document.getElementById('valorantplayer0' + i + '_img');
+            img.src = 'srcpack/Valorant_Gamers/' + valorantTeam[0] + '/' + valorantPlayerImg[player_index] + '.png';
+            name = document.getElementById('valorantplayer0' + i + '_name');
+            name.innerHTML = valorantPlayerImg[player_index];
+            introduction = document.getElementById('valorantplayer0' + i + '_introduction');
+            // introduction.innerHTML = //TODO
+            href = document.getElementById('valorantplayer0' + i + '_href')
+            href.setAttribute('href', valorantPlayerImg[player_index] + '.html');
+            break;
+          }
+        }
+    }, false);
     valorant_Fnatic = document.getElementById("valorant_Fnatic");
-    valorant_Fnatic.addEventListener("click", function () { document.getElementById("valorantTeamBtn").innerHTML = "Fnatic" }, false);
+    valorant_Fnatic.addEventListener("click", function () { 
+      document.getElementById("valorantTeamBtn").innerHTML = "Fnatic";
+      var valorantVisit = new Array(5);
+      var player_index;
+      var img, name, introduction, href;
+      for(var i=0; i<5; i++)
+        valorantVisit[i] = 0;
+      for(var i=1; i<=5; i++)
+        while(1) {
+          player_index = Math.floor(5 + Math.random() * 5); //5~9
+          if (valorantVisit[player_index] != 1) {
+            valorantVisit[player_index] = 1;
+            img = document.getElementById('valorantplayer0' + i + '_img');
+            img.src = 'srcpack/Valorant_Gamers/' + valorantTeam[1] + '/' + valorantPlayerImg[player_index] + '.png';
+            name = document.getElementById('valorantplayer0' + i + '_name');
+            name.innerHTML = valorantPlayerImg[player_index];
+            introduction = document.getElementById('valorantplayer0' + i + '_introduction');
+            // introduction.innerHTML = //TODO
+            href = document.getElementById('valorantplayer0' + i + '_href')
+            href.setAttribute('href', valorantPlayerImg[player_index] + '.html');
+            break;
+          }
+        }
+    }, false);
     valorant_Gambit = document.getElementById("valorant_Gambit");
-    valorant_Gambit.addEventListener("click", function () { document.getElementById("valorantTeamBtn").innerHTML = "Gambit" }, false);
+    valorant_Gambit.addEventListener("click", function () { 
+      document.getElementById("valorantTeamBtn").innerHTML = "Gambit";
+      var valorantVisit = new Array(5);
+      var player_index;
+      var img, name, introduction, href;
+      for(var i=0; i<5; i++)
+        valorantVisit[i] = 0;
+      for(var i=1; i<=5; i++)
+        while(1) {
+          player_index = Math.floor(10 + Math.random() * 5); //10~14
+          if (valorantVisit[player_index] != 1) {
+            valorantVisit[player_index] = 1;
+            img = document.getElementById('valorantplayer0' + i + '_img');
+            img.src = 'srcpack/Valorant_Gamers/' + valorantTeam[2] + '/' + valorantPlayerImg[player_index] + '.png';
+            name = document.getElementById('valorantplayer0' + i + '_name');
+            name.innerHTML = valorantPlayerImg[player_index];
+            introduction = document.getElementById('valorantplayer0' + i + '_introduction');
+            // introduction.innerHTML = //TODO
+            href = document.getElementById('valorantplayer0' + i + '_href')
+            href.setAttribute('href', valorantPlayerImg[player_index] + '.html');
+            break;
+          }
+        }
+    }, false);
     valorant_SENTINELS = document.getElementById("valorant_SENTINELS");
-    valorant_SENTINELS.addEventListener("click", function () { document.getElementById("valorantTeamBtn").innerHTML = "SENTINELS" }, false);
+    valorant_SENTINELS.addEventListener("click", function () { 
+      document.getElementById("valorantTeamBtn").innerHTML = "SENTINELS";
+      var valorantVisit = new Array(5);
+      var player_index;
+      var img, name, introduction, href;
+      for(var i=0; i<5; i++)
+        valorantVisit[i] = 0;
+      for(var i=1; i<=5; i++)
+        while(1) {
+          player_index = Math.floor(15 + Math.random() * 5); //15~19
+          if (valorantVisit[player_index] != 1) {
+            valorantVisit[player_index] = 1;
+            img = document.getElementById('valorantplayer0' + i + '_img');
+            img.src = 'srcpack/Valorant_Gamers/' + valorantTeam[3] + '/' + valorantPlayerImg[player_index] + '.png';
+            name = document.getElementById('valorantplayer0' + i + '_name');
+            name.innerHTML = valorantPlayerImg[player_index];
+            introduction = document.getElementById('valorantplayer0' + i + '_introduction');
+            // introduction.innerHTML = //TODO
+            href = document.getElementById('valorantplayer0' + i + '_href')
+            href.setAttribute('href', valorantPlayerImg[player_index] + '.html');
+            break;
+          }
+        }
+    }, false);
     valorant_TeamLiquid = document.getElementById("valorant_TeamLiquid");
-    valorant_TeamLiquid.addEventListener("click", function () { document.getElementById("valorantTeamBtn").innerHTML = "Team Liquid" }, false);
+    valorant_TeamLiquid.addEventListener("click", function () { 
+      document.getElementById("valorantTeamBtn").innerHTML = "Team Liquid";
+      var valorantVisit = new Array(5);
+      var player_index;
+      var img, name, introduction, href;
+      for(var i=0; i<5; i++)
+        valorantVisit[i] = 0;
+      for(var i=1; i<=5; i++)
+        while(1) {
+          player_index = Math.floor(20 + Math.random() * 5); //20~24
+          if (valorantVisit[player_index] != 1) {
+            valorantVisit[player_index] = 1;
+            img = document.getElementById('valorantplayer0' + i + '_img');
+            img.src = 'srcpack/Valorant_Gamers/' + valorantTeam[4] + '/' + valorantPlayerImg[player_index] + '.png';
+            name = document.getElementById('valorantplayer0' + i + '_name');
+            name.innerHTML = valorantPlayerImg[player_index];
+            introduction = document.getElementById('valorantplayer0' + i + '_introduction');
+            // introduction.innerHTML = //TODO
+            href = document.getElementById('valorantplayer0' + i + '_href')
+            href.setAttribute('href', valorantPlayerImg[player_index] + '.html');
+            break;
+          }
+        }
+      
+    }, false);
 }
 
 function search() {

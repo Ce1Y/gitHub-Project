@@ -26,7 +26,6 @@ const valorantPlayerImg = [
 let apexplayer01, apexplayer02, apexplayer03, apexplayer04, apexplayer05;
 let csgoplayer01, csgoplayer02, csgoplayer03, csgoplayer04, csgoplayer05;
 let valorantplayer01, valorantplayer02, valorantplayer03, valorantplayer04, valorantplayer05;
-let searchResults;
 let apex_NRG, apex_TSM, apex_Others, apex_Cloud9, apex_G2;
 let csgo_NatusVincere, csgo_G2Esports, csgo_Astralis, csgo_TeamVitality, csgo_TeamLiquid;
 let valorant_Acend, valorant_Fnatic, valorant_Gambit, valorant_SENTINELS, valorant_TeamLiquid;

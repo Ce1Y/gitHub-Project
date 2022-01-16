@@ -26,10 +26,21 @@ const valorantPlayerImg = [
 let apexplayer01, apexplayer02, apexplayer03, apexplayer04, apexplayer05;
 let csgoplayer01, csgoplayer02, csgoplayer03, csgoplayer04, csgoplayer05;
 let valorantplayer01, valorantplayer02, valorantplayer03, valorantplayer04, valorantplayer05;
-let searchResults;
 let apex_NRG, apex_TSM, apex_TeamLiquid, apex_Cloud9, apex_G2;
 let csgo_NatusVincere, csgo_G2Esports, csgo_Astralis, csgo_TeamVitality, csgo_TeamLiquid;
 let valorant_Acend, valorant_Fnatic, valorant_Gambit, valorant_SENTINELS, valorant_TeamLiquid;
+let searchbtn, searchResults;
+
+function search() {
+  searchResults = document.getElementById("searchResults").value;
+  searchResults.toLowerCase();
+  switch(searchResults) {
+    case 'aceu':
+      window.open('Aceu.html');
+      break;
+    
+  }
+}
 
 function apex_random_select() {
     var apexVisit = new Array(25);
@@ -339,7 +350,7 @@ function valorant_random_select() {
 
 function apexBtnClick() {
   apex_NRG = document.getElementById("apex_NRG");
-  apex_NRG.addEventListener("click", function () { document.getElementById("apexTeamBtn").innerHTML = "NRG" }, false);
+  apex_NRG.addEventListener("click", function () { console.log(typeof(apex_NRG.value)); document.getElementById("apexTeamBtn").innerHTML = "NRG" }, false);
   apex_TSM = document.getElementById("apex_TSM");
   apex_TSM.addEventListener("click", function () { document.getElementById("apexTeamBtn").innerHTML = "Team SoloMid" }, false);
   apex_TeamLiquid = document.getElementById("apex_TeamLiquid");
@@ -355,7 +366,7 @@ function csgoBtnClick() {
     csgo_NatusVincere.addEventListener("click", function () { 
       document.getElementById("csgoTeamBtn").innerHTML = "Natus Vincere";
       var csgoVisit = new Array(5);
-      var player_index;
+      var player_index;c
       var img, name, introduction, href;
       for(var i=0; i<5; i++)
         csgoVisit[i] = 0;
@@ -611,10 +622,6 @@ function valorantBtnClick() {
     }, false);
 }
 
-function search() {
-    //TODO
-}
-
 function start() {
     apexBtnClick();
     csgoBtnClick();
@@ -622,6 +629,9 @@ function start() {
     apex_random_select();
     csgo_random_select();
     valorant_random_select();
+    searchbtn = document.getElementById("searchbtn");
+    console.log(searchbtn);
+    searchbtn.addEventListener("click", search, false);
 }
 
 window.addEventListener("load", start, false)

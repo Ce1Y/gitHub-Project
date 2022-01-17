@@ -1,8 +1,0 @@
-a {
-    text-decoration: none;
-}
-a:hover {
-    color: rgb(0, 110, 255);
-    font-weight: bold;
-    text-shadow: rgb(255, 0, 0) 0.1em 0.05em 0.2em;
-}
